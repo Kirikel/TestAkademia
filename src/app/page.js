@@ -19,18 +19,3 @@ export default async function Home() {
     </>
   )
 }
-
-// {context.products.length
-//   ? context.products.map(product => <div key={product.id}>{product.name}</div>)
-//   : null}
-// <button onClick={() => context.setProducts(prev => [...prev, { id: 6, name: 'John' }])}>
-//   Add Product
-// </button>
-// <button onClick={() => context.setProducts(prev => [...prev, { id: 8, name: 'Kendrick' }])}>
-//   Add Product
-// </button>
-// <button
-//   onClick={() => context.setProducts(context.products.filter(product => product.id !== 6))}
-// >
-//   Remove Product
-// </button>
