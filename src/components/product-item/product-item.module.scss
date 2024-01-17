@@ -1,0 +1,65 @@
+.root {
+  padding: 10px;
+  border-radius: 4px;
+  background: var(--violet-3);
+
+  [data-title] {
+    display: block;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 500;
+    margin-bottom: 3px;
+  }
+
+  [data-desc] {
+    font-size: 13px;
+    line-height: 20px;
+    font-weight: 300;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: 10px;
+    min-height: 40px;
+  }
+
+  [data-row] {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.imageWrap {
+  position: relative;
+  height: 200px;
+  width: 100%;
+  border-radius: inherit;
+  overflow: hidden;
+  margin-bottom: 10px;
+
+  > img {
+    object-fit: cover;
+  }
+
+  > a {
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+  }
+}
+.cartButton {
+  background: none;
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+
+  > svg {
+    display: inline-flex;
+  }
+}

@@ -1,0 +1,96 @@
+.container {
+  --thumb-swiper-h: 70px;
+  height: 647px;
+  width: 100%;
+
+  > div {
+    height: 100%;
+  }
+}
+
+.mainSwiper {
+  height: calc(100% - var(--thumb-swiper-h));
+}
+
+.mainImage {
+  width: 100%;
+  height: 100%;
+  position: relative;
+
+  > a {
+    display: block;
+    position: relative;
+    height: 100%;
+  }
+
+  img {
+    object-fit: contain;
+  }
+}
+
+.thumbsContainer {
+  position: relative;
+}
+
+.thumbSwiper {
+  --swiper-navigation-sides-offset: 0;
+
+  height: var(--thumb-swiper-h);
+  width: 300px;
+}
+
+.thumbSlide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.thumbArrow {
+  all: unset;
+  color: black;
+  cursor: pointer;
+  font-size: 26px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  display: inline-flex;
+
+  &[disabled] {
+    opacity: 0.5;
+  }
+
+  &.prevArrow {
+    left: 65px;
+  }
+
+  &.nextArrow {
+    right: 65px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .container {
+    height: 500px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .thumbArrow {
+    &.prevArrow {
+      left: 0;
+    }
+
+    &.nextArrow {
+      right: 0;
+    }
+  }
+
+  .container {
+    height: 400px;
+  }
+}
