@@ -2,10 +2,10 @@
 
 import s from './product.module.scss'
 
-export default function Error({ error, reset }) {
+export default function Error() {
   return (
     <div>
-      <h2 className={s.empty}>{error.message}</h2>
+      <h2 className={s.empty}>Такого товара не существует</h2>
     </div>
   )
 }
